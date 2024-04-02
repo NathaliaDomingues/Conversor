@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+body{
+   background-color: #ccccbb;
+   font-family: sans-serif;
+   color: #2d2e2c;
+}
+
+h1{
+    color: #2d2e2c;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 30px;
+}
+
+input{
+    background-color: #2d2e2c;
+    color: #ccccbb;
+}
+
+footer{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.toggle-btn{
+    display: none;
+}
+
+.toggle-label{
+    width: 60px;
+    height: 30px;
+    background-color: #f7dece;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 38%;
+    display: block;
+}
+
+.toggle-label::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 20%;
+    background-color: #9ec4bb;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.4s ease;
+}
+
+.toggle-btn:checked + .toggle-label{
+    background-color: #2d2e2c;
+}
+
+.toggle-btn:checked + .toggle-label::before{
+    transform: translateX(30px);
+}
+
+.dark{
+    background-color: #2d2e2c;
+}
+
+.dark input{
+    color: #ccccbb;
+}
+
+.dark fieldset{
+    color: #ccccbb;
+}
+
+.dark h1{
+    color: #9ec4bb;
+}
+
+.dark footer{
+    color: #9ec4bb;
+}
